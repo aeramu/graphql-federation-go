@@ -1,0 +1,18 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Sales @key(fields: "id"){
+  id: ID!
+  name: String!
+  code: String!
+  phone: String!
+}
+
+type Query {
+  getSales(id: ID!): Sales!
+}
+
+type Mutation {
+  createSales(name: String!, phone: String!): String!
+}
